@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Gerador de senhas</title>
+</head>
+<body>
+    <main id="container-corpo">
+
+        <section class="caixa-1" aria-label="Ferramenta de geracao">
+            <div class="apresentacao">
+                <h2>Melhor segurança</h2>
+
+                <h1>Gerador de senhas aleatória</h1>
+
+                <p>Crie senhas fortes com letras, números e simbolos em poucos segundos.</p>
+            </div>
+        </section>
+
+        <section class="caixa-2">   
+            <div class="senha-gerada">
+                <label for="senha">Senha gerada</label>
+                <input type="text" name="senha" id="senha" readonly>
+
+                <button type="button" id="botao" class="btn">
+                    Copiar
+                </button>
+            </div>
+
+            <div class="forca">
+                <span>Força</span>
+                <strong id="medidor">Forte</strong>
+                <div class="med-vazio"><span id="vazio"></span></div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
