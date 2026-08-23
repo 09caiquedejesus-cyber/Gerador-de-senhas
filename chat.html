@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senha Aleatoria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="generator" aria-label="Gerador de senha aleatoria">
+      <header class="hero">
+        <p class="eyebrow">Seguranca rapida</p>
+        <h1>Gerador de senha aleatoria</h1>
+        <p>Crie senhas fortes com letras, numeros e simbolos em poucos segundos.</p>
+      </header>
+
+      <section class="tool" aria-label="Ferramenta de geracao">
+        <div class="password-panel">
+          <label for="password">Senha gerada</label>
+          <div class="password-output">
+            <input id="password" type="text" readonly aria-live="polite">
+            <button id="copyButton" class="icon-button" type="button" aria-label="Copiar senha" title="Copiar senha">
+              Copiar
+            </button>
+          </div>
+          <p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="strength">
+          <div class="strength-header">
+            <span>Forca</span>
+            <strong id="strengthLabel">Forte</strong>
+          </div>
+          <div class="strength-meter" aria-hidden="true">
+            <span id="strengthBar"></span>
+          </div>
+        </div>
+
+        <form class="settings" id="settingsForm">
+          <div class="range-row">
+            <label for="length">Tamanho</label>
+            <output id="lengthValue" for="length">16</output>
+          </div>
+          <input id="length" name="length" type="range" min="6" max="32" value="16">
+
+          <fieldset class="options">
+            <legend>Caracteres</legend>
+
+            <label class="option">
+              <input type="checkbox" id="uppercase" checked>
+              <span>Letras maiusculas</span>
+            </label>
+
+            <label class="option">
+              <input type="checkbox" id="lowercase" checked>
+              <span>Letras minusculas</span>
+            </label>
+
+            <label class="option">
+              <input type="checkbox" id="numbers" checked>
+              <span>Numeros</span>
+            </label>
+
+            <label class="option">
+              <input type="checkbox" id="symbols" checked>
+              <span>Simbolos</span>
+            </label>
+          </fieldset>
+
+          <button class="generate-button" type="submit">Gerar nova senha</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

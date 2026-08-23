@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/******************************
+PALETAS DE CORES
+*******************************/
+:root{
+  --primary: #2563EB;
+  --primary-dark: #1D4ED8;
+  --background: #0F172A;
+  --surface: #1E293B;
+  --text: #F8FAFC;
+  --text-muted: #94A3B8;  
+}
+
+/******************************
+ FIM DA PALETAS DE CORES
+*******************************/
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to top, #dedede , #dedfff, #cfd8e5);
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 28px;
+}
+
+#container-corpo{
+   display: grid; 
+   grid-template-columns: 0.95fr 1.05fr;
+   overflow: hidden;
+   width:min(100%, 980px) ;
+   min-height: 620px;
+   border: 1px solid  rgba(255, 255, 255, 0.76);
+   border-radius: 28px;
+   
+}
+
+.caixa-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+}
+
+.caixa-2{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+

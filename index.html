@@ -28,12 +28,54 @@
                     Copiar
                 </button>
             </div>
+            <p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
 
-            <div class="forca">
-                <span>Força</span>
-                <strong id="medidor">Forte</strong>
-                <div class="med-vazio"><span id="vazio"></span></div>
+            <div id="forca">
+                <div class="forca-cabecalho">
+                    <span>Força</span>
+                    <strong id="medidor">Forte</strong>
+                </div>
+
+                <div class="med-vazio" aria-hidden="true">
+                    <span id="vazio"></span>
+                </div>
             </div>
+
+
+            <form action="#" method="post" id="form">
+                <div class="range-form">
+                    <label for="length">Tamanho</label>
+                    <output id="comprimento" for="length">16</output>
+                    <input type="range" name="length" id="length" value="16" min="6" max="32">
+                </div>
+
+
+                <fieldset class="opcoes">
+                    <legend>Caracteres</legend>
+
+                    <label class="opcoes" >
+                        <input type="checkbox"  id="maiusculas" checked>
+                        <span>Letras maiúsculas</span>
+                    </label>
+
+                    <label class="opcoes" >
+                        <input type="checkbox"  id="menusculas" checked>
+                        <span>Letras minúsculas</span>
+                    </label>
+
+                    <label class="opcoes" >
+                        <input type="checkbox"  id="numeros" checked>
+                        <span>Números</span>
+                    </label>
+
+                    <label class="opcoes" >
+                        <input type="checkbox"  id="simbolos" checked>
+                        <span>Simbolos</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="gerar">Gerar nova senha</button>
+            </form>
         </section>
 
     </main>
