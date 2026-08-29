@@ -47,8 +47,10 @@
 
             <form action="#" method="post" id="form">
                 <div class="range-form">
-                    <label for="length">Tamanho</label>
-                    <output id="comprimento" for="length">16</output>
+                    <div class="tam">
+                        <label for="length">Tamanho</label>
+                        <output id="comprimento" for="length">16</output>
+                    </div>
                     <input type="range" name="length" id="length" value="16" min="6" max="32">
                 </div>
 
@@ -56,22 +58,22 @@
                 <fieldset class="opcoes">
                     <legend>Caracteres</legend>
 
-                    <label class="opcoes" >
+                    <label class="opcao" >
                         <input type="checkbox"  id="maiusculas" checked>
                         <span>Letras maiúsculas</span>
                     </label>
 
-                    <label class="opcoes" >
+                    <label class="opcao" >
                         <input type="checkbox"  id="menusculas" checked>
                         <span>Letras minúsculas</span>
                     </label>
 
-                    <label class="opcoes" >
+                    <label class="opcao" >
                         <input type="checkbox"  id="numeros" checked>
                         <span>Números</span>
                     </label>
 
-                    <label class="opcoes" >
+                    <label class="opcao" >
                         <input type="checkbox"  id="simbolos" checked>
                         <span>Simbolos</span>
                     </label>
