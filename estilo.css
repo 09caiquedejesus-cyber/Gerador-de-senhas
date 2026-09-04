@@ -26,6 +26,15 @@ PALETAS DE CORES
  FIM DA PALETAS DE CORES
 *******************************/
 
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top, #dedede , #dedfff, #cfd8e5);
@@ -33,7 +42,9 @@ body{
     display: grid;
     place-items: center;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 28px;
+    overflow-x: hidden;
 }
 
 #container-corpo{
@@ -349,40 +360,137 @@ fim do formulário
 ******************************/
 
 /* ========================================
-   MEDIA QUERIES — TELAS MENORES
+   MEDIA QUERIES — RESPONSIVIDADE COMPLETA
  ==========================================*/
 
- @media (max-width: 966px){
+@media (max-width: 966px){
+    body{
+        padding: 20px 16px;
+    }
+
     #container-corpo{
         grid-template-columns: 1fr;
         min-height: auto;
+        border-radius: 20px;
     }
- }
 
- @media(max-width: 520px){
+    .caixa-1{
+        padding: 36px 24px;
+        text-align: center;
+    }
+
+    .caixa-1 h1{
+        font-size: 1.8rem;
+    }
+
+    .caixa-2{
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 600px){
     body{
-        padding: 12px;
+        padding: 12px 8px;
     }
 
     #container-corpo{
         border-radius: 16px;
-    }
-    .caixa-1, .caixa-2 {
-        padding: 24px 16px;
-    }
-
-    .opcoes {
-        grid-template-columns: 1fr;
-    }
- }
-
- @media(max-width: 380px){
-     .painel-senha .sg {
-        flex-direction: column; 
-        gap: 10px; 
-    }
-
-     #botao {
         width: 100%;
     }
- }
+
+    .caixa-1{
+        padding: 24px 16px;
+        text-align: center;
+    }
+
+    .caixa-1 h2{
+        font-size: 0.85rem;
+        padding: 4px;
+    }
+
+    .caixa-1 h1{
+        font-size: 1.45rem;
+        padding: 6px 0;
+    }
+
+    .caixa-1 p{
+        font-size: 0.95rem;
+        line-height: 1.4;
+        padding: 6px 0;
+    }
+
+    .caixa-2{
+        padding: 20px 14px;
+    }
+
+    .painel-senha{
+        margin-bottom: 18px;
+    }
+
+    .painel-senha .sg{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    input[type="text"]{
+        width: 100%;
+        height: 54px;
+        font-size: 1.05rem;
+        text-align: center;
+        padding: 10px 12px;
+    }
+
+    #botao{
+        width: 100%;
+        height: 48px;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    #forca{
+        padding: 14px;
+        margin-bottom: 20px;
+    }
+
+    .opcoes{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .opcao{
+        min-height: 46px;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    .gerar{
+        margin-top: 20px;
+        padding: 16px;
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 360px){
+    body{
+        padding: 8px 4px;
+    }
+
+    .caixa-1, .caixa-2{
+        padding: 18px 10px;
+    }
+
+    .caixa-1 h1{
+        font-size: 1.25rem;
+    }
+
+    input[type="text"]{
+        font-size: 0.92rem;
+        padding: 0 8px;
+    }
+
+    .opcao{
+        padding: 8px 10px;
+        font-size: 0.88rem;
+    }
+}
